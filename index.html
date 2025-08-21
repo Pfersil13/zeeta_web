@@ -1,53 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>3-Axis Animation</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-  <h2>3-Axis Sine Sequence</h2>
-  <canvas id="sequenceChart" width="400" height="200"></canvas>
 
-  <script>
-    async function fetchData() {
-      const response = await fetch("/sequence.json");
-      const data = await response.json();
-
-      const labels = [...Array(data.frames).keys()];
-      const u = data.positions.U.map(Number);
-      const v = data.positions.V.map(Number);
-      const w = data.positions.W.map(Number);
-
-      const ctx = document.getElementById('sequenceChart').getContext('2d');
-      new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: labels,
-          datasets: [
-            { label: 'U', data: u, borderColor: 'red', fill: false },
-            { label: 'V', data: v, borderColor: 'green', fill: false },
-            { label: 'W', data: w, borderColor: 'blue', fill: false }
-          ]
-        },
-        options: {
-          responsive: true,
-          scales: {
-            x: { display: true, title: { display: true, text: 'Frame' } },
-            y: { display: true, title: { display: true, text: 'Value' } }
-          }
-        }
-      });
-    }
-
-    fetchData();
-  </script>
-</body>
-</html>
-)rawliteral";
-
-
-
-  const char PAGE_MAIN[]  = R"=====(
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -178,7 +129,7 @@
 
 .chart-section canvas {
   width: 100% !important;
-  height: 600px !important; /* o la altura que quieras */
+  height: 600px !important; 
 }
 </style>
 </head>
@@ -385,3 +336,4 @@ setInterval(fetchData, 1000);
 
 </div>
 </html>
+
