@@ -94,6 +94,11 @@ section.soft {
 }
 
 .btn-primary {
+  background: var(--brand);
+  color: #fff ;
+}
+
+.btn-header {
   background: #fff;
   color: var(--brand) ;
 }
