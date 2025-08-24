@@ -25,6 +25,12 @@ body {
   font-family: Raleway, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif;
   background: var(--bg);
   color: var(--ink);
+  /*background: linear-gradient(var(--brand) 5% , var(--accent)  , white 10% );*/
+
+}
+
+.icono {
+    width: 100px;
 }
 
 /* ================================
@@ -57,6 +63,7 @@ p {
 /* ================================
    Layout general
 ================================= */
+
 .container {
   max-width: 1120px;
   margin-inline: auto;
@@ -87,8 +94,8 @@ section.soft {
 }
 
 .btn-primary {
-  background: var(--brand);
-  color: #fff;
+  background: #fff;
+  color: var(--brand) ;
 }
 
 .btn-outline {
@@ -222,10 +229,12 @@ footer a {
 header {
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.9);
+  /*background: rgba(255, 255, 255, 0.9);*/
+  background: var(--brand);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--line);
+ /* border-bottom: 1px solid var(--line);*/
   z-index: 10;
+ color: white;
 }
 
 nav a {
