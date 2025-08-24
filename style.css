@@ -191,6 +191,11 @@ section.soft {
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
   }
+
+@media (min-width: 720px) {
+  .grid-hacemos {
+    grid-template-columns: 1fr 2fr; ;
+  }
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
   }
